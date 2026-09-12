@@ -37,6 +37,7 @@ Leggi la conoscenza brand dalla sua sede esistente, senza duplicarla. Per un bra
 ### Fonti e integrazioni
 
 - Preferisci i dati di performance del brand forniti dall'utente o già disponibili in lettura: conserva periodo, metrica e criterio che definisce un vincitore. Se hai solo la Meta Ad Library, longevità, varianti e impression disponibili sono **indizi per selezionare candidati**, non prova di redditività. Non inventare ROAS, CPA, spesa o impression mancanti.
+- Se il progetto ha una **libreria swipe con documenti per brand** (`swipe/ads/<brand>.md`, standard v2 di Copy Genius: una scheda per ad con testo integrale, traduzione, anatomia dell'hook, tabella della struttura e template, raggruppate per livello di consapevolezza), quella è la fonte lavorata dei vincitori e la lettura parte da lì. Le analisi delle ads si scrivono solo in quel formato, tramite `/ad-scraping` o la skill `swipe-ingestion` quando disponibili: questa skill le legge, non ne produce altre versioni.
 - Se il corpus manca o ha più di sette giorni, usa `/ad-scraping` o la skill `brand-monitor` **se disponibile** per aggiornarlo. Questa skill non fa scraping in proprio. Se l'integrazione manca, chiedi ads, trascrizioni o esportazioni all'utente. Con un corpus vecchio dichiarane la data e il limite; senza corpus procedi solo come esplorazione, senza presentare esempi inventati come vincitori.
 - Per l'organico usa `organic-monitor` / `/organico` **se disponibile**, oppure materiali, trascrizioni e appunti forniti dall'utente. Non presumere che TikTok, Instagram, YouTube o i loro commenti siano accessibili.
 - Per video non ancora trascritti usa una skill di trascrizione locale disponibile. Se manca, chiedi la trascrizione. L'installazione di Creative Strategist non installa scraper, trascrittori o altre skill.
@@ -47,7 +48,7 @@ Leggi la conoscenza brand dalla sua sede esistente, senza duplicarla. Per un bra
 Prima di tutto leggi scheda brand e offerta corrente: prodotto, pubblico, landing, condizioni e prove disponibili.
 
 1. Verifica corpus, aggiornamento e criterio di selezione con le regole sulle fonti sopra.
-2. Leggi insieme i top del brand, separati per bucket di consapevolezza; osserva anche le nuove creatività con segnali precoci, distinguendo i segnali dalle performance dimostrate.
+2. Leggi insieme i top del brand, separati per bucket di consapevolezza. Se esiste il documento swipe del brand, parti da lì: Bucket 1 = sezioni Unaware e Problem-aware, Bucket 2 = sezioni Solution-aware e Product-aware (most-aware si salta); anatomia dell'hook, tabella della struttura e template di ogni scheda sono la base degli appunti pattern e degli Starter Prompt. Un vincitore senza scheda si fa schedare con `/ad-scraping` se disponibile; altrimenti leggilo dal corpus dichiarando che l'analisi è fatta in seduta. Osserva anche le nuove creatività con segnali precoci, distinguendo i segnali dalle performance dimostrate.
 3. 👤 Annota temi, toni emotivi, strutture di prova e hook ricorrenti nelle «Note pattern» di `vincitori.md`. In guidata annota le osservazioni dell'utente; in autonoma indica che sono inferenze della skill.
 4. Rileggi `storie-linguaggio-cliente.md`, testimonianze e ricerca del brand. Integra i materiali forniti dall'utente con riferimenti alle fonti.
 
